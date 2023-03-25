@@ -1,3 +1,6 @@
+/**
+ * enumerable que contiene los generos de los Funkos
+ */
 export enum Genero {
   Animacion = 'Animacion',
   PeliculasYTv = 'Peliculas y TV',
@@ -8,6 +11,9 @@ export enum Genero {
   Otros = 'Otros',
 }
 
+/**
+ * enumerable que contiene los tipos de los Funkos
+ */
 export enum Tipo {
   Pop = 'Pop!',
   PopVinilo = 'Pop! Vinilo',
@@ -16,6 +22,27 @@ export enum Tipo {
   PopXXL = 'Pop! XXL',
 }
 
+/**
+ * Clase Funko
+ * @param id id del Funko
+ * @param nombre nombre del Funko
+ * @param Genero genero del Funko
+ * @param Tipo tipo del Funko
+ * @param Franquicia franquicia del Funko
+ * @param idFranquicia id de la franquicia del Funko
+ * @param exclusivo si el Funko es exclusivo o no
+ * @param caracteristicas caracteristicas del Funko
+ * @param valorNumerico valor numerico del Funko en el mercado
+ * @method GetId() devuelve el id del Funko
+ * @method GetNombre() devuelve el nombre del Funko
+ * @method GetGenero() devuelve el genero del Funko
+ * @method GetTipo() devuelve el tipo del Funko
+ * @method GetFranquicia() devuelve la franquicia del Funko
+ * @method GetIdFranquicia() devuelve el id de la franquicia del Funko
+ * @method GetExclusivo() devuelve si el Funko es exclusivo o no
+ * @method GetCaracteristicas() devuelve las caracteristicas del Funko
+ * @method GetValorNumerico() devuelve el valor numerico del Funko en el mercado
+ */
 export class Funko{
   static id = new Set<number>();
   static idFranquicia = new Set<number>();
