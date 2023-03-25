@@ -1,8 +1,9 @@
 import 'mocha';
 import { expect } from 'chai';
-import { Funko } from '../../src/Funko/Funko';
-import { Genero } from '../../src/Funko/Funko';
-import { Tipo } from '../../src/Funko/Funko';
+import { Funko } from '../../src/Funko/Funko.js';
+import { Genero } from '../../src/Funko/Funko.js';
+import { Tipo } from '../../src/Funko/Funko.js';
+
 
 describe('Se comprueba la clase Funko', () => {
   const FunkoPain = new Funko(1, 'Pain', Genero.Anime, Tipo.PopXXL,'Naruto', 934,

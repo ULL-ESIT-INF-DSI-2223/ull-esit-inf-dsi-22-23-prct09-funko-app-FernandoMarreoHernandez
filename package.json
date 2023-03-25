@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  //"type": "module",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
     "doc": "typedoc",
     "test": "mocha",
-    "coverage": "nyc npm test && nyc report --reporter=lcov",
-    "type": "module"
+    "coverage": "nyc npm test && nyc report --reporter=lcov"
   },
   "keywords": [],
   "author": "",
