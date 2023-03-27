@@ -53,6 +53,7 @@ export class Funko{
   constructor(
     id: number,
     private nombre: string,
+    private descripcion: string,
     private Genero: Genero,
     private Tipo: Tipo,
     Franquicia: string,
@@ -140,5 +141,92 @@ export class Funko{
    * */
   GetValorNumerico(): number {
     return this.valorNumerico;
+  }
+
+  /**
+   * Funcion que devuelve la descripcion del Funko
+   * @returns descripcion
+   * */
+  GetDescripcion(): string {
+    return this.descripcion;
+  }
+
+  /**
+   * Setid
+   * @param id
+   * */
+  public SetId(id: number) {
+    this.id = id;
+  }
+
+  /**
+   * SetNombre
+   */
+  public SetNombre(nombre: string) {
+    this.nombre = nombre;
+  }
+
+  /**
+   * SetDescripcion
+   * @param descripcion
+   * */
+  public SetDescripcion(descripcion: string) {
+    this.descripcion = descripcion;
+  }
+
+  /**
+   * SetGenero
+   * @param genero
+   * */
+  public SetGenero(genero: Genero) {
+    this.Genero = genero;
+  }
+
+  /**
+   * SetTipo
+   * @param tipo
+   * */
+  public SetTipo(tipo: Tipo) {
+    this.Tipo = tipo;
+  }
+
+  /**
+   * SetFranquicia
+   * @param franquicia
+   * */
+  public SetFranquicia(franquicia: string) {
+    this.Franquicia = franquicia;
+  }
+
+  /**
+   * SetIdFranquicia
+   * @param idFranquicia
+   * */
+  public SetIdFranquicia(idFranquicia: number) {
+    this.idFranquicia = idFranquicia;
+  }
+
+  /**
+   * SetExclusivo
+   * @param exclusivo
+   * */
+  public SetExclusivo(exclusivo: boolean) {
+    this.exclusivo = exclusivo;
+  }
+
+  /**
+   * SetCaracteristicas
+   * @param caracteristicas
+   * */
+  public SetCaracteristicas(caracteristicas: string) {
+    this.caracteristicas = caracteristicas;
+  }
+
+  /**
+   * SetValorNumerico
+   * @param valorNumerico
+   * */
+  public SetValorNumerico(valorNumerico: number) {
+    this.valorNumerico = valorNumerico;
   }
 }

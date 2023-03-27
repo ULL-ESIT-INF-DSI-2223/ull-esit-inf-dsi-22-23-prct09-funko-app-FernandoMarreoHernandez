@@ -1,12 +1,9 @@
 import { Funko } from './Funko.js';
 
 export class ColeccionFunkos {
-  private static ColeccionFunkos: ColeccionFunkos;
-  private static funkos: Funko[] = [];
-  private static idDuenio: number;
-  constructor(Funkos: Funko[], idDuenio: number) {
-    ColeccionFunkos.funkos = Funkos;
-    ColeccionFunkos.idDuenio = idDuenio;
+  constructor(private funkos: Funko[], private Duenio:string) {
+    this.funkos = funkos;
+    this.Duenio = Duenio;
   }
 
   /**
@@ -15,7 +12,7 @@ export class ColeccionFunkos {
    * @returns Funko[]
    */
   getFunkos(): Funko[] {
-    return ColeccionFunkos.funkos;
+    return this.funkos;
   }
 
   /**
@@ -25,7 +22,7 @@ export class ColeccionFunkos {
    * @returns void
    */
   aniadirFunko(funko_entrada: Funko) {
-    ColeccionFunkos.funkos.push(funko_entrada);
+    this.funkos.push(funko_entrada);
     return funko_entrada;
   }
 
@@ -36,10 +33,10 @@ export class ColeccionFunkos {
    * @returns void
    */
   eliminarFunko(indice: number): void {
-    if (indice < 0 || indice >= ColeccionFunkos.funkos.length) {
+    if (indice < 0 || indice >= this.funkos.length) {
       return;
     }
-    ColeccionFunkos.funkos.splice(indice, 1);
+    this.funkos.splice(indice, 1);
   }
 
   /**
@@ -49,9 +46,29 @@ export class ColeccionFunkos {
    * @returns Funko
    */
   getFunko(id: number): Funko | undefined {
-    const funko = ColeccionFunkos.funkos.find(funko => funko.GetId() === id);
+    const funko = this.funkos.find(funko => funko.GetId() === id);
     return funko;
   }
+
+  /**
+   * Método que devuelve el dueño de la colección
+   * @method getDuenioColeccion
+   * @returns string
+   */
+  getDuenioColeccion(): string {
+    return this.Duenio;
+  }
+
+  /**
+   * Método que modifica el dueño de la colección
+   * @method setDuenioColeccion
+   * @param duenio
+   * @returns void
+   */
+  setDuenioColeccion(duenio: string): void {
+    this.Duenio = duenio;
+  }
+
 
 
 }
