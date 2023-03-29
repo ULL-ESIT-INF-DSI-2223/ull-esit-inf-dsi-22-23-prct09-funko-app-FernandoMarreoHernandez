@@ -10,6 +10,7 @@ import { exit } from 'process';
 const log = console.log;
 let ColeccionDatos1 = new ColeccionDatos([]);
 
+
 interface ColeccionDeDatos {
   funkos: Funko[];
   Duenio: string;
@@ -302,7 +303,7 @@ yargs(hideBin(process.argv))
   })
 
   //comando para mostrar los datos de un funko de un usuario
-  
+
   .command('show', 'Muestra los datos de un funko de un usuario', {
     usuario: {
       description: 'User', //descripcion del campo
