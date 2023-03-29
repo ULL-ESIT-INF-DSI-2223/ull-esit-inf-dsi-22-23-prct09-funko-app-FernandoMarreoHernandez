@@ -53,7 +53,7 @@ export class ColeccionFunkos {
       throw new Error('No existe el funko con ese id');
     }
   }
-    
+
 
   /**
    * Método que devuelve un funko a partir de su id
@@ -84,7 +84,4 @@ export class ColeccionFunkos {
   setDuenioColeccion(duenio: string): void {
     this.Duenio = duenio;
   }
-
-
-
 }

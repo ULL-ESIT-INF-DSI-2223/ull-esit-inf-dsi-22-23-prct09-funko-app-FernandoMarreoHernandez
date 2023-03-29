@@ -91,7 +91,7 @@ export class Funko{
       //comprueba si con la misma franquicia existe otro funko con el mismo id de franquicia
       if (Funko.idFranquicia.has(idFranquicia) && Funko.Franquicia.has(Franquicia)) {
         //comprueba si existe otro funko con el mismo nombre y distinto idfranquicia
-        if (Funko.nombre.has(nombre) && !Funko.idFranquicia.has(idFranquicia)) {
+        if (!Funko.nombre.has(nombre) && Funko.idFranquicia.has(idFranquicia)) {
           throw new Error('El id de la franquicia ya en uso');
         }
       }
