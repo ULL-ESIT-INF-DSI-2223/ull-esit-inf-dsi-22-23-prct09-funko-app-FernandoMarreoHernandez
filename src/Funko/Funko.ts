@@ -25,6 +25,7 @@ export enum Tipo {
   PopXXL = 'Pop! XXL',
 }
 
+
 /**
  * Clase Funko
  * @param id id del Funko

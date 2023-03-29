@@ -302,6 +302,7 @@ yargs(hideBin(process.argv))
   })
 
   //comando para mostrar los datos de un funko de un usuario
+  
   .command('show', 'Muestra los datos de un funko de un usuario', {
     usuario: {
       description: 'User', //descripcion del campo
