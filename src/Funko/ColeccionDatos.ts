@@ -1,27 +1,50 @@
-import { ColeccionFunkos } from "./ColeccionFunkos.js";
+import { ColeccionFunkos } from "./ColeccionFunkos";
 import { Funko,Genero,Tipo } from "./Funko";
-let Funko1 = new Funko(1, 'Pain','es una figura de la serie Naruto (best anime ever)', Genero.Anime, Tipo.PopXXL,'Naruto', 934,
-false, 'cabeza bailona',15.99);
-let Funko2 = new Funko(2, 'Pain','es una figura de la serie Naruto (best anime ever)', Genero.Anime, Tipo.PopXXL,'Naruto', 935,
-false, 'cabeza bailona',15.99);
-let Funko3 = new Funko(3, 'Pain','es una figura de la serie Naruto (best anime ever)', Genero.Anime, Tipo.PopXXL,'Naruto', 936,
-false, 'cabeza bailona',15.99);
+/**
+ * Clase que representa una coleccion de Funkos
+ * @class ColeccionFunkos
+ * @method constructor
+ * @method getDatos
+ * @method getDatosUsuario
+ * @method aniadirDatos
+ * @method eliminarDatos
+ */
 export class ColeccionDatos {
   constructor(private datos: ColeccionFunkos[]) {
-    datos.push(new ColeccionFunkos([Funko1,Funko2], 'Fernando'));
-    datos.push(new ColeccionFunkos([Funko3], 'Pablo'));
+
     this.datos = datos;
   }
+  /**
+   * getter para obtener los datos
+   * @returns ColeccionFunkos[]
+   */
   getDatos(): ColeccionFunkos[] {
     return this.datos;
   }
+  /**
+   * Método que devuelve un array de funkos
+   * @method getDatosUsuario
+   * @returns ColeccionFunkos | undefined
+   */
   getDatosUsuario(nombre: string): ColeccionFunkos | undefined {
     const datos = this.datos.find((c) => c.getDuenioColeccion() === nombre);
     return datos;
   }
+  /**
+   * Método que añade un funko al array de funkos
+   * @method aniadirDatos
+   * @param coleccion
+   * @returns void
+   */
   aniadirDatos(coleccion: ColeccionFunkos): void {
     this.datos.push(coleccion);
   }
+  /**
+   * Método que elimina un funko del array de funkos a partir del id del funko
+   * @method eliminarDatos
+   * @param nombre
+   * @returns void
+   */
   eliminarDatos(nombre : string): void {
     this.datos = this.datos.filter((c) => c.getDuenioColeccion() !== nombre);
   }

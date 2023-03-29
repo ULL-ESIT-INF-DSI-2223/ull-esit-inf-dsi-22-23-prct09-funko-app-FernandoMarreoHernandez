@@ -1,5 +1,16 @@
-import { Funko } from './Funko.js';
+import { Funko } from './Funko';
 
+/**
+ * Clase que representa una coleccion de Funkos
+ * @class ColeccionFunkos
+ * @method constructor
+ * @method getFunkos
+ * @method aniadirFunko
+ * @method eliminarFunko
+ * @method getFunko
+ * @method getDuenioColeccion
+ * @method setDuenioColeccion
+ */
 export class ColeccionFunkos {
   constructor(private funkos: Funko[], private Duenio:string) {
     this.funkos = funkos;
@@ -27,17 +38,22 @@ export class ColeccionFunkos {
   }
 
   /**
-   * Método que elimina un funko del array de funkos
+   * Método que elimina un funko del array de funkos a partir del id del funko
    * @method eliminarFunko
    * @param indice
    * @returns void
    */
   eliminarFunko(indice: number): void {
-    if (indice < 0 || indice >= this.funkos.length) {
-      return;
+    const funko = this.funkos.find(funko => funko.GetId() === indice);
+    if (funko) {
+      const indiceFunko = this.funkos.indexOf(funko);
+      this.funkos.splice(indiceFunko, 1);
     }
-    this.funkos.splice(indice, 1);
+    else{
+      throw new Error('No existe el funko con ese id');
+    }
   }
+    
 
   /**
    * Método que devuelve un funko a partir de su id
