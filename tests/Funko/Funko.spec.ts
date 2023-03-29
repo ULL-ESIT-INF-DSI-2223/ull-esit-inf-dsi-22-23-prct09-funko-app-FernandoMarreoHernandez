@@ -4,7 +4,7 @@ import { Funko,Genero,Tipo } from '../../src/Funko/Funko';
 import chalk from 'chalk';
 
 describe('Funko', () => {
-    let Funko1 = new Funko(400, 'Pain','es una figura de la serie Naruto (best anime ever)', Genero.Anime, Tipo.PopXXL,'Naruto', 934,
+    let Funko1 = new Funko(400, 'Pain','es una figura de la serie Naruto (best anime ever)', Genero.Anime, Tipo.PopXXL,'Naruto', 93,
 false, 'cabeza bailona',15.99);
     it('se crea un Funko', () => {
         expect(Funko1).to.be.an.instanceOf(Funko);
@@ -16,7 +16,7 @@ false, 'cabeza bailona',15.99);
         expect(Funko1.GetGenero()).to.be.equal(Genero.Anime);
         expect(Funko1.GetTipo()).to.be.equal(Tipo.PopXXL);
         expect(Funko1.GetFranquicia()).to.be.equal('Naruto');
-        expect(Funko1.GetIdFranquicia()).to.be.equal(934);
+        expect(Funko1.GetIdFranquicia()).to.be.equal(93);
         expect(Funko1.GetExclusivo()).to.be.equal(false);
         expect(Funko1.GetCaracteristicas()).to.be.equal('cabeza bailona');
         expect(Funko1.GetValorNumerico()).to.be.equal(15.99);
